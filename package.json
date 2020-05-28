@@ -1,0 +1,24 @@
+{
+  "name": "stream-chat-pusher-beams",
+  "version": "1.0.0",
+  "description": "Stream Chat to Pusher Beams",
+  "main": "handler.js",
+  "repository": "git@github.com:nparsons08/stream-chat-pusher-beams.git",
+  "author": "Nick Parsons <nparsons08@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@pusher/push-notifications-server": "^1.2.0",
+    "serverless-offline": "^6.2.0",
+    "serverless-webpack": "^5.3.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.0",
+    "@babel/core": "^7.10.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
+    "source-map-support": "^0.5.19",
+    "webpack": "^4.43.0"
+  }
+}

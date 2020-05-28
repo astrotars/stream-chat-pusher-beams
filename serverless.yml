@@ -1,0 +1,32 @@
+service: stream-chat-pusher-beams
+app: stream-chat-pusher-beams
+tenant: stream
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  environment:
+    PUSHER_INSTANCE_ID: 123
+    PUSHER_SECRET_KEY: 123
+
+functions:
+  push:
+    handler: handler.push
+    events:
+      - http:
+          path: /
+          method: post
+
+plugins:
+    - serverless-offline
+    - serverless-webpack
+
+custom:
+    webpack:
+        packager: 'yarn'
+        webpackConfig: 'webpack.config.js'
+        includeModules: true
+    serverless-offline:
+        port: 8000
